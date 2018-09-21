@@ -16,13 +16,5 @@ export default {
     First,
     Second,
   },
-  computed: {
-    ...mapGetters('first', [
-      'firstGetter'
-    ]),
-    ...mapGetters('second', [
-      'secondGetter'
-    ]),
-  },
 }
 </script>

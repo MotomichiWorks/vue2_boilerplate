@@ -6,12 +6,16 @@ Vue.use(Vuex)
 import first from './modules/first'
 import second from './modules/second'
 
-const state = {
-
+const state = () => {
+  return {
+    rootExampleState: 'rootExampleStateの初期値'
+  }
 }
 
 const getters = {
-
+  rootExampleGetter() {
+    return 'rootExampleGetterの値'
+  },
 }
 
 const actions = {
@@ -30,5 +34,7 @@ export default new Vuex.Store({
   modules: {
     first,
     second,
+    // moduleのstateを関数でreturnすることによって、moduleを複製して別名で使用することができます。
+    secondClone: second,
   },
 })
