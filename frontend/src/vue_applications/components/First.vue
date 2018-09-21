@@ -1,21 +1,20 @@
 <template>
-  <div id="app">
-    <First/>
-    <Second/>
+  <div>
+    ひとつめのコンポーネント
+    <div>
+      {{ firstGetter }}
+    </div>
+    <div>
+      {{ secondGetter }}
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import First from './components/First'
-import Second from './components/Second'
 
 export default {
-  name: 'app',
-  components: {
-    First,
-    Second,
-  },
+  name: 'First',
   computed: {
     ...mapGetters('first', [
       'firstGetter'
@@ -23,6 +22,9 @@ export default {
     ...mapGetters('second', [
       'secondGetter'
     ]),
+  },
+  methods: {
+
   },
 }
 </script>

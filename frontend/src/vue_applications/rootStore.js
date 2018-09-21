@@ -3,12 +3,8 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const module1 = {
-  state: {},
-  mutations: {},
-  actions: {},
-  getters: {},
-}
+import first from './modules/first'
+import second from './modules/second'
 
 const state = {
 
@@ -26,12 +22,13 @@ const mutations = {
 
 }
 
-const store = new Vuex.Store({
+export default new Vuex.Store({
   state,
   getters,
   actions,
   mutations,
   modules: {
-    module1,
-  }
+    first,
+    second,
+  },
 })
